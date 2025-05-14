@@ -32,6 +32,53 @@ namespace G_S_Backend
         {
             return Math.Sqrt(ScalarProduct(this, this));
         }
+
+        public static Vector operator +(Vector a, Vector b)
+        {
+            return AddVectors(a,b);
+        }
+        public static Vector operator -(Vector a, Vector b)
+        {
+            return SubtractVectors(a, b);
+        }
+        public static Vector operator *(Vector a, double b)
+        {
+            return a.MultiplyScalar(b);
+        }
+        public static Vector operator *(double b, Vector a)
+        {
+            return a.MultiplyScalar(b);
+        }
+        public static Vector operator /(Vector a, double b)
+        {
+            return a.DivideScalar(b);
+        }
+        public static Vector AddVectors(Vector a, Vector b)
+        {
+            if (a.Dimension == b.Dimension) 
+            {
+                double[] newVector = new double[a.Dimension];
+                for (int i = 0; i < a.Dimension; i++)
+                {
+                    newVector[i] = a.components[i] + b.components[i];
+                }
+                return new Vector(newVector);
+            }
+            throw new Exception("Vectors's dimensions must be equal");
+        }
+        public static Vector SubtractVectors(Vector a, Vector b)
+        {
+            if (a.Dimension == b.Dimension)
+            {
+                double[] newVector = new double[a.Dimension];
+                for (int i = 0; i < a.Dimension; i++)
+                {
+                    newVector[i] = a.components[i] - b.components[i];
+                }
+                return new Vector(newVector);
+            }
+            throw new Exception("Vectors's dimensions must be equal");
+        }
         public Vector MultiplyScalar(double a)
         {
             double[] newVector = new double[this.Dimension];
@@ -51,13 +98,13 @@ namespace G_S_Backend
             return new Vector(newVector);
         }
 
-        public int this[int index]
+        public double this[int index]
         {
             get
             {
                 try
                 {
-                    return this[index - 1];
+                    return components[index - 1];
                 }
                 catch
                 {
@@ -65,7 +112,18 @@ namespace G_S_Backend
                 }                
             }
         }
-
+        public override string ToString()
+        {
+            string vector = "( ";
+            for (int i = 0; i < Dimension; i++)
+            {
+                vector += components[i].ToString();
+                if(Dimension - 1 != i)
+                    vector += ", ";
+            }
+            vector += ")";
+            return vector;
+        }
         public int Dimension => components.Length;
     }
 }

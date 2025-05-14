@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -28,7 +29,7 @@ namespace G_S_Backend
             }
             catch
             {
-                throw new Exception($"Unaccessible vector, this vector system only have {VectorsCount} vectors");
+                throw new Exception($"Unaccessible vector, this vectors system only have {VectorsCount} vectors");
             }
         }
         public VectorSystem Orthonormalize()
@@ -37,10 +38,14 @@ namespace G_S_Backend
             vectorsSystem.Add(vectors[0].DivideScalar(vectors[0].Norm()));
             for (int i = 1; i < VectorsCount; i++) 
             {
-
+                Vector newVector = vectors[i];
+                for (int j = i - 1; j >= 0; j--)
+                {
+                    newVector = newVector - (Vector.ScalarProduct(vectors[i], vectorsSystem[j]) * vectorsSystem[j]);
+                }
+                newVector = newVector / newVector.Norm();
+                vectorsSystem.Add(newVector);
             }
-
-
             return new VectorSystem(vectorsSystem);
         }
         public IEnumerator<Vector> GetEnumerator()
@@ -60,6 +65,18 @@ namespace G_S_Backend
             {
                 return vectors[index - 1];
             }
+        }
+        public override string ToString()
+        {
+            string vSystem = "{ ";
+            for (int i = 0; i < VectorsCount; i++)
+            {
+                vSystem += vectors[i].ToString();
+                if (VectorsCount - 1 != i)
+                    vSystem += ", ";
+            }
+            vSystem += "}";
+            return vSystem;
         }
 
     }

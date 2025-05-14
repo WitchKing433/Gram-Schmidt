@@ -1,0 +1,12 @@
+D:\XARXES\Programación\Gram-Schmidt\Gram-Schmidt\G-S_Backend\G-S_Backend\bin\Debug\net9.0\G-S_Backend.deps.json
+D:\XARXES\Programación\Gram-Schmidt\Gram-Schmidt\G-S_Backend\G-S_Backend\bin\Debug\net9.0\G-S_Backend.dll
+D:\XARXES\Programación\Gram-Schmidt\Gram-Schmidt\G-S_Backend\G-S_Backend\bin\Debug\net9.0\G-S_Backend.pdb
+D:\XARXES\Programación\Gram-Schmidt\Gram-Schmidt\G-S_Backend\G-S_Backend\obj\Debug\net9.0\G-S_Backend.GeneratedMSBuildEditorConfig.editorconfig
+D:\XARXES\Programación\Gram-Schmidt\Gram-Schmidt\G-S_Backend\G-S_Backend\obj\Debug\net9.0\G-S_Backend.AssemblyInfoInputs.cache
+D:\XARXES\Programación\Gram-Schmidt\Gram-Schmidt\G-S_Backend\G-S_Backend\obj\Debug\net9.0\G-S_Backend.AssemblyInfo.cs
+D:\XARXES\Programación\Gram-Schmidt\Gram-Schmidt\G-S_Backend\G-S_Backend\obj\Debug\net9.0\G-S_Backend.csproj.CoreCompileInputs.cache
+D:\XARXES\Programación\Gram-Schmidt\Gram-Schmidt\G-S_Backend\G-S_Backend\obj\Debug\net9.0\G-S_Backend.sourcelink.json
+D:\XARXES\Programación\Gram-Schmidt\Gram-Schmidt\G-S_Backend\G-S_Backend\obj\Debug\net9.0\G-S_Backend.dll
+D:\XARXES\Programación\Gram-Schmidt\Gram-Schmidt\G-S_Backend\G-S_Backend\obj\Debug\net9.0\refint\G-S_Backend.dll
+D:\XARXES\Programación\Gram-Schmidt\Gram-Schmidt\G-S_Backend\G-S_Backend\obj\Debug\net9.0\G-S_Backend.pdb
+D:\XARXES\Programación\Gram-Schmidt\Gram-Schmidt\G-S_Backend\G-S_Backend\obj\Debug\net9.0\ref\G-S_Backend.dll
